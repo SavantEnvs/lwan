@@ -1,0 +1,9 @@
+project: savantenvs/lwan
+target: pattern_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pattern_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/pattern_fuzzer
+    libfuzzer: true
+    timeout: 5
